@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:fournture_task/wedgets/gridView.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../wedgets/listofIcons.dart';
 
@@ -21,29 +22,37 @@ class Homeview extends StatelessWidget {
               children: [
                 Text(
                   'Make home',
-                  style: TextStyle(
-                      color: Colors.grey,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 18),
+                  style: GoogleFonts.gelasio(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                    color: Color.fromARGB(255, 182, 180, 180),
+                  ),
                 ),
                 Text(
                   'BEAUTIFUL',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 22),
+                  style: GoogleFonts.gelasio(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    color: Color.fromARGB(255, 26, 25, 25),
+                  ),
                 ),
               ],
             ),
           ),
-          leading: Icon(
-            Icons.search,
-            color: Colors.grey,
+          leading: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Icon(
+              Icons.search,
+              color: Colors.grey,
+            ),
           ),
           actions: [
-            Icon(
-              Icons.shopping_cart,
-              color: Colors.grey,
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Icon(
+                Icons.shopping_cart,
+                color: Colors.grey,
+              ),
             )
           ],
         ),

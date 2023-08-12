@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../models/product.dart';
 
 class ProductCard extends StatelessWidget {
@@ -28,11 +31,25 @@ class ProductCard extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(right: 8),
-            child: Text(product.productName),
+            child: Text(
+              product.productName,
+              style: GoogleFonts.nunitoSans(
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+                color: Color.fromARGB(255, 182, 180, 180),
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(right: 8),
-            child: Text(product.productPrice),
+            child: Text(
+              product.productPrice,
+              style: GoogleFonts.nunitoSans(
+                fontSize: 18,
+                fontWeight: FontWeight.w700,
+                color: Color.fromARGB(255, 22, 22, 22),
+              ),
+            ),
           ),
         ],
       ),
