@@ -8,18 +8,22 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Container(
-            width: 157,
-            height: 253,
-            child: Image.asset(
-              product.imagePath,
-              fit: BoxFit.cover,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(15),
+            child: Container(
+              width: 100,
+              height: 200,
+              child: Image.asset(
+                product.imagePath,
+                fit: BoxFit.cover,
+                scale: 10,
+              ),
             ),
           ),
           Padding(

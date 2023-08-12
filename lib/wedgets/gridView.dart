@@ -9,16 +9,20 @@ class MyGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          mainAxisSpacing: 150.0,
-          crossAxisSpacing: 10.0,
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            childAspectRatio: 0.7,
+            crossAxisCount: 2,
+            mainAxisSpacing: 10.0,
+            crossAxisSpacing: 10.0,
+          ),
+          itemCount: products.length,
+          itemBuilder: (BuildContext context, int index) {
+            return ProductCard(product: products[index]);
+          },
         ),
-        itemCount: products.length,
-        itemBuilder: (BuildContext context, int index) {
-          return ProductCard(product: products[index]);
-        },
       ),
     );
   }
